@@ -1,0 +1,30 @@
+{
+  "name": "kusoMouseStalker",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "色とりどりのクソがマウスを追っかけてきます！",
+  "icons": {
+    "16": "icon/icon_16.png",
+    "48": "icon/icon_48.png",
+    "128": "icon/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "kusoMouseStalker",
+    "default_icon": {
+      "19": "icon/icon_19.png",
+      "38": "icon/icon_38.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "js/p5.min.js",
+        "js/jquery-2.1.3.min.js",
+        "js/kuso.js",
+        "js/sketch.js"
+      ],
+      "css": ["css/style.css"]
+    }
+  ]
+}
